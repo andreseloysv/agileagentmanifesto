@@ -1,0 +1,125 @@
+          <p>A refinement meeting discusses work someone will do later. In an Agile Agent team, a developer and a BA pair online and build the story in that same time. The goal is a 3-point story built in the time refinement used to take.</p>
+        </div>
+      </li>
+      <li class="principle">
+        <span class="num" aria-hidden="true">6</span>
+        <div class="body">
+          <h3>Developers fly the plane</h3>
+          <p class="tagline">Agents are the autopilot. Responsibility never moves to the agent.</p>
+          <p>A developer reviews and approves every merge request, with AI help, and takes the controls when the autopilot fails. Architecture, security, performance and data migrations stay with developers.</p>
+        </div>
+      </li>
+      <li class="principle">
+        <span class="num" aria-hidden="true">7</span>
+        <div class="body">
+          <h3>Prove it, don't promise it</h3>
+          <p class="tagline">Every change to how we work starts as a measured pilot.</p>
+          <p>One team, six to eight weeks. Measure lead time, review time, change failure rate and production defects before and after, and decide with the data.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" aria-labelledby="layers">
+    <header class="measure">
+      <p class="eyebrow">The foundation</p>
+      <h2 id="layers">Five layers that keep code right</h2>
+      <p class="caption">Build from the bottom up. Each layer catches what the one below misses.</p>
+    </header>
+    <div class="pyramid" role="list">
+      <div class="layer l5" role="listitem"><b>5 · Developer approval</b><span>Every change, every time</span></div>
+      <div class="layer l4" role="listitem"><b>4 · Enforced rules</b><span>Lint and architecture tests fail the build</span></div>
+      <div class="layer l3" role="listitem"><b>3 · Agents</b><span>For everything scripts can't do</span></div>
+      <div class="layer l2" role="listitem"><b>2 · Scripts</b><span>AI writes automation for repeatable work</span></div>
+      <div class="layer l1" role="listitem"><b>1 · Homogeneous code</b><span>One way to do each thing, everywhere</span></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="team">
+    <header class="measure">
+      <p class="eyebrow">The new team</p>
+      <h2 id="team">From handoffs to pairs</h2>
+    </header>
+    <div class="teams">
+      <div class="team">
+        <h3>Today</h3>
+        <div class="people" aria-label="Four developers and one or two business analysts">
+          <div class="group"><span class="dot dev">DEV</span></div>
+          <div class="group"><span class="dot dev">DEV</span></div>
+          <div class="group"><span class="dot dev">DEV</span></div>
+          <div class="group"><span class="dot dev">DEV</span></div>
+          <div class="group"><span class="dot ba">BA</span></div>
+          <div class="group"><span class="dot maybe">BA?</span></div>
+        </div>
+        <p><strong>4 developers + 1–2 BAs.</strong> The BA writes the story, the team refines it, developers build it. Every step is a handoff.</p>
+      </div>
+      <div class="team new">
+        <h3>Agile Agent team</h3>
+        <div class="people" aria-label="Two pairs of a developer and a business analyst, plus one developer for architecture and guardrails">
+          <div class="group"><div class="pair"><span class="dot dev">DEV</span><span class="link"></span><span class="dot ba">BA</span></div><small>Pair</small></div>
+          <div class="group"><div class="pair"><span class="dot dev">DEV</span><span class="link"></span><span class="dot ba">BA</span></div><small>Pair</small></div>
+          <div class="group"><span class="dot dev">DEV</span><small>Architecture and guardrails</small></div>
+        </div>
+        <p><strong>3 developers + 2 BA/BEs</strong> (business analysts or business engineers). They pair online every day and build the story together.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="big">4 <svg class="arrow" viewBox="0 0 40 20" aria-label="to" role="img"><path d="M0 7h26V0l14 10-14 10v-7H0z" fill="currentColor"/></svg> 3</span><span class="label">Developers</span><span class="note">The hypothesis: the same output with one developer fewer.</span></div>
+      <div class="stat"><span class="big">1–2 <svg class="arrow" viewBox="0 0 40 20" aria-label="to" role="img"><path d="M0 7h26V0l14 10-14 10v-7H0z" fill="currentColor"/></svg> 2</span><span class="label">BA / BE</span><span class="note">More business input, every day. Developers can grow into this role.</span></div>
+      <div class="stat"><span class="big">~€900</span><span class="label">Per person, per month</span><span class="note">Budget estimate for an agent subscription for each team member.</span></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="zones">
+    <header class="measure">
+      <p class="eyebrow">Who changes what</p>
+      <h2 id="zones">Three zones, one approver</h2>
+    </header>
+    <div class="zones">
+      <div class="zone z-green">
+        <span class="chip"><i aria-hidden="true"></i>Green zone</span>
+        <span class="who">A BA or PO with an agent</span>
+        <ul><li>Texts and translations</li><li>Small UI changes</li><li>Configuration and feature toggles</li><li>Changes that follow an existing pattern</li></ul>
+      </div>
+      <div class="zone z-yellow">
+        <span class="chip"><i aria-hidden="true"></i>Yellow zone</span>
+        <span class="who">A BA and a developer in a pair</span>
+        <ul><li>User stories up to 3 story points</li><li>New behavior inside the existing architecture</li></ul>
+      </div>
+      <div class="zone z-red">
+        <span class="chip"><i aria-hidden="true"></i>Red zone</span>
+        <span class="who">Developers</span>
+        <ul><li>Architecture</li><li>Security</li><li>Performance</li><li>Data migrations</li></ul>
+      </div>
+    </div>
+    <p class="measure"><span class="rule-line">A developer approves every change.</span> Code owners rules in the repository protect the red zone, and repository permissions decide who can open a merge request where.</p>
+  </section>
+
+  <section class="section" aria-labelledby="pilot">
+    <header class="measure">
+      <p class="eyebrow">Prove it</p>
+      <h2 id="pilot">One team, six to eight weeks</h2>
+    </header>
+    <div class="pilot">
+      <div><h3>Setup</h3><ul><li>3 developers + 2 BA/BEs</li><li>Only the AI tools the company allows</li><li>Guardrails in CI from day one</li></ul></div>
+      <div><h3>Needs</h3><ul><li>A platform that turns a prompt into a merge request</li><li>Repository permissions per person</li><li>AI-assisted code review</li></ul></div>
+      <div class="measure-col"><h3>Measure</h3><ul><li>Lead time per story</li><li>Review time</li><li>Change failure rate</li><li>Defects in production</li></ul></div>
+    </div>
+  </section>
+
+  <section class="sign" aria-labelledby="sign">
+    <p class="eyebrow">Signatories</p>
+    <h2 id="sign">Add your name</h2>
+    <p>If you want to build software this way, sign the manifesto. Comment "I sign" on the launch post on <a href="https://www.linkedin.com/in/andreseloysv" rel="noopener">LinkedIn</a>, with your name and role, and you will be added here.</p>
+    <ol class="signatories">
+      <li><span>Andres Sanchez</span><span class="role">Author · Engineering lead</span></li>
+    </ol>
+  </section>
+
+  <footer class="foot">
+    <span>The Agile Agent Manifesto · October 2026</span>
+    <span>Written by <a href="https://www.linkedin.com/in/andreseloysv" rel="noopener">Andres Sanchez</a></span>
+  </footer>
+</div>
+</body>
+</html>
