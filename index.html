@@ -5,6 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Agile Agent Manifesto</title>
 <meta name="description" content="Seven principles for building software when agents write the code.">
+<meta name="author" content="Andres Sanchez">
+<link rel="canonical" href="https://agileagentmanifesto.org/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314161F'/%3E%3Cpath d='M32 10 52 52H42.5L39 44H25L21.5 52H12ZM28 36H36L32 26Z' fill='%23F5F2EA'/%3E%3Crect x='12' y='56' width='40' height='4' fill='%23E8743B'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#14161F">
+
+<!-- Open Graph (LinkedIn, Facebook, Slack, WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Agile Agent Manifesto">
+<meta property="og:url" content="https://agileagentmanifesto.org/">
+<meta property="og:title" content="The Agile Agent Manifesto">
+<meta property="og:description" content="Seven principles for building software when agents write the code.">
+<meta property="og:image" content="https://agileagentmanifesto.org/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Agile Agent Manifesto: a developer and a business analyst on a call, with a merge request that passed lint and architecture checks.">
+<meta property="og:locale" content="en_US">
+
+<!-- X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Agile Agent Manifesto">
+<meta name="twitter:description" content="Seven principles for building software when agents write the code.">
+<meta name="twitter:image" content="https://agileagentmanifesto.org/og-image.jpg">
+<meta name="twitter:image:alt" content="The Agile Agent Manifesto: a developer and a business analyst on a call, with a merge request that passed lint and architecture checks.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -170,6 +194,13 @@ p { margin: 0; }
 .team p { color: var(--muted); }
 .team p strong { color: var(--ink); }
 
+.shot { margin: 0; display: grid; grid-template-columns: minmax(0, 26rem) minmax(0, 1fr); gap: 36px; align-items: center; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--rule); }
+.shot figcaption { display: flex; flex-direction: column; gap: 12px; max-width: 30rem; }
+.shot figcaption p { color: var(--muted); }
+.shot figcaption .eyebrow { color: var(--blue); }
+.shot .fine { font-size: 0.875rem; }
+
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; border-top: 2px solid var(--ink); padding-top: 24px; }
 .stat { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .stat .big { font-family: var(--display); font-weight: 600; font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.05; font-variant-numeric: tabular-nums; }
@@ -209,7 +240,7 @@ footer.foot { border-top: 1px solid var(--rule); padding-top: 24px; display: fle
 
 @media (max-width: 760px) {
   .page { gap: 72px; }
-  .teams, .zones, .pilot, .stats { grid-template-columns: minmax(0, 1fr); }
+  .teams, .zones, .pilot, .stats, .shot { grid-template-columns: minmax(0, 1fr); }
   .principle { grid-template-columns: minmax(0, 1fr); padding-block: 26px; }
   .principle .num { font-size: 2.25rem; }
   .l5, .l4, .l3, .l2, .l1 { width: 100%; }
@@ -363,6 +394,15 @@ footer.foot { border-top: 1px solid var(--rule); padding-top: 24px; display: fle
         <p><strong>3 developers + 2 BA/BEs</strong> (business analysts or business engineers). They pair online every day and build the story together.</p>
       </div>
     </div>
+    <figure class="shot">
+      <img src="images/pairing-call.jpg" width="1080" height="1350" loading="lazy" alt="A video call: a developer and a business analyst pair while an agent opens a merge request that passes lint and architecture tests and waits for the developer's approval.">
+      <figcaption>
+        <p class="eyebrow">Principle 5 in practice</p>
+        <h3>What a pairing session looks like</h3>
+        <p>The BA describes the change, the agent writes it and opens the merge request, the guardrails run in CI, and the developer approves what ships.</p>
+        <p class="fine">The people in this picture are AI-generated.</p>
+      </figcaption>
+    </figure>
     <div class="stats">
       <div class="stat"><span class="big">4 <svg class="arrow" viewBox="0 0 40 20" aria-label="to" role="img"><path d="M0 7h26V0l14 10-14 10v-7H0z" fill="currentColor"/></svg> 3</span><span class="label">Developers</span><span class="note">The hypothesis: the same output with one developer fewer.</span></div>
       <div class="stat"><span class="big">1–2 <svg class="arrow" viewBox="0 0 40 20" aria-label="to" role="img"><path d="M0 7h26V0l14 10-14 10v-7H0z" fill="currentColor"/></svg> 2</span><span class="label">BA / BE</span><span class="note">More business input, every day. Developers can grow into this role.</span></div>
